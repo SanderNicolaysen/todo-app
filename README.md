@@ -1,3 +1,20 @@
+# Todo App
+
+SPA created in React.
+
+URL: https://todo-a8655.web.app/
+
+Tools:
+ - React
+ - React hooks (useState, useEffect, useRef)
+ - Custom hooks
+ - Firebase
+ - localStorage
+ - CSS (flexbox, grid)
+ - material-ui
+
+--------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
