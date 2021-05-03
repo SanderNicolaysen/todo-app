@@ -1,0 +1,41 @@
+@import "../../Variables.css";
+
+.todo-list {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  grid-area: active;
+  /* transition: box-shadow 350ms ease-in-out; */
+}
+
+/* .todo-list:hover {
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+.todo-body {
+  padding: 2rem;
+  position: relative;
+}
+
+.btn {
+  composes: btn from "../../App.css";
+}
+
+.btn.delete {
+  opacity: 0.7;
+  font-size: 1rem;
+  transition: color 200ms ease-in;
+}
+
+.btn.delete:hover {
+  color: var(--clr-warning);
+}
+
+.delete-stuff {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -35px;
+  color: var(--clr-light);
+}

@@ -1,0 +1,57 @@
+@import "../../../Variables.css";
+
+form {
+  display: flex;
+}
+
+.btn {
+  composes: btn from "../../../App.css";
+}
+
+.new {
+  background: transparent;
+  border: none;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+  transition: border-bottom 150ms ease-in;
+  order: 2;
+  padding: 0.25em;
+}
+
+.new.list {
+  font-size: 1.1rem;
+}
+
+.new::placeholder {
+  color: inherit;
+  opacity: 0.4;
+}
+
+.new:focus {
+  border-bottom-width: 3px;
+}
+
+.new:focus::placeholder {
+  opacity: 0.15;
+}
+
+.new.task {
+  margin-bottom: 0;
+}
+
+.new-task-creator .create {
+  color: var(--clr-primary);
+}
+
+.btn.create {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 0.25em;
+  transition: opacity 250ms ease-in;
+}
+
+.btn.create:hover {
+  opacity: 0.7;
+}

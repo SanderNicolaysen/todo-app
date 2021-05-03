@@ -1,0 +1,136 @@
+@import "../../../Variables.css";
+
+.task label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  order: -1;
+}
+
+.task {
+  position: relative;
+  margin-bottom: 1.25em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  composes: btn from "../../../App.css";
+}
+
+.edit-task .btn {
+  font-size: 1.1rem;
+  transition: opacity 250ms ease-in;
+}
+
+.edit-task .btn:hover {
+  opacity: 0.5;
+}
+
+.btn.edit,
+.btn.success {
+  margin: 0.3em;
+}
+
+.task::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: -0.5em;
+  background: currentColor;
+  opacity: 0.1;
+}
+
+.custom-checkbox {
+  --size: 0.75em;
+  height: var(--size);
+  width: var(--size);
+  border: 2px solid currentColor;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: var(--size);
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+
+.task:hover .custom-checkbox,
+[type="checkbox"]:focus + label .custom-checkbox {
+  transform: scale(1.2);
+  color: var(--clr-primary);
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  box-shadow: inset 0 0 0 2px white;
+}
+
+[type="checkbox"]:checked + label {
+  opacity: 0.5;
+}
+
+.custom-edit-checkbox {
+  --size: 0.75em;
+  height: var(--size);
+  width: var(--size);
+  border: 2px solid currentColor;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: var(--size);
+  transform: scale(1.2);
+  transition: transform 300ms ease-in-out;
+  color: var(--clr-edit);
+}
+
+.task label::after {
+  content: "";
+  position: absolute;
+  left: 1.4em;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 200ms ease-in-out;
+}
+
+[type="checkbox"]:checked + label::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.edit-input {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font: inherit;
+  outline: none;
+  transition: border-bottom 150ms ease-in;
+  padding: 0.25em;
+  position: absolute;
+  left: 1.25em;
+}
+
+.new::placeholder {
+  color: inherit;
+  opacity: 0.4;
+}
+
+.new:focus {
+  border-bottom-width: 2px;
+}
+
+.new:focus::placeholder {
+  opacity: 0.15;
+}

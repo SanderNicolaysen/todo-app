@@ -1,0 +1,19 @@
+@import "../.././../Variables.css";
+
+.todo-header {
+  background: #e4e4e4;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-title {
+  margin: 0;
+  margin-right: 1em;
+}
+
+.task-count {
+  margin: 0;
+  font-size: 1rem;
+}
