@@ -42,7 +42,8 @@ form {
 }
 
 .new-task-creator .create {
-  color: var(--clr-primary);
+  color: var(--clr-blue);
+  opacity: 0.8;
 }
 
 .btn.create {
@@ -53,5 +54,5 @@ form {
 }
 
 .btn.create:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }

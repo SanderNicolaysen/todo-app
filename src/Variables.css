@@ -1,9 +1,11 @@
 :root {
-  --clr-primary: rgb(54, 112, 199);
+  /* --clr-primary: rgb(54, 112, 199); */
+  --clr-primary: #282c34;
   --clr-light: #f4f4f4;
   --clr-dark: #333;
   --clr-warning: rgb(99, 36, 36);
-  --clr-edit: #c89f44;
+  --clr-edit: #ffc05c;
   --clr-delete: #ca4121;
   --clr-success: #00874e;
+  --clr-blue: #3f51b5;
 }

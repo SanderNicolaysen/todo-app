@@ -17,11 +17,14 @@ body {
 }
 
 .app {
-  display: grid;
-  grid-template-columns: 1fr minmax(250px, 500px) 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* grid-template-columns: 1fr minmax(250px, 500px) 1fr;
   grid-template-areas:
-    "header header header"
-    "...... active .....";
+    ". . ."
+    "...... active ....."; */
 }
 
 .title {

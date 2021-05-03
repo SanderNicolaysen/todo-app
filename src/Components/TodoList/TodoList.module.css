@@ -4,6 +4,9 @@
   background: var(--clr-light);
   color: var(--clr-dark);
   grid-area: active;
+  width: 500px;
+  align-self: flex-start;
+  margin-top: 5rem;
   /* transition: box-shadow 350ms ease-in-out; */
 }
 
@@ -27,7 +30,7 @@
 }
 
 .btn.delete:hover {
-  color: var(--clr-warning);
+  color: var(--clr-delete);
 }
 
 .delete-stuff {

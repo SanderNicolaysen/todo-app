@@ -60,12 +60,12 @@
 .task:hover .custom-checkbox,
 [type="checkbox"]:focus + label .custom-checkbox {
   transform: scale(1.2);
-  color: var(--clr-primary);
+  color: var(--clr-blue);
 }
 
 [type="checkbox"]:checked + label .custom-checkbox {
-  background: var(--clr-primary);
-  border-color: var(--clr-primary);
+  background: var(--clr-blue);
+  border-color: var(--clr-blue);
   box-shadow: inset 0 0 0 2px white;
 }
 

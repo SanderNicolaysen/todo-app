@@ -9,7 +9,7 @@ const Todo = (props) => {
 
   useEffect(() => {
     setEditInput(props.todo.text);
-  }, []);
+  }, [props.todo.text]);
 
   useEffect(() => {
     if (isEditing) {

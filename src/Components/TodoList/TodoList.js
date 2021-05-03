@@ -2,11 +2,21 @@ import classes from "./TodoList.module.css";
 import Todo from "./Todo/Todo";
 import TodoForm from "./TodoForm/TodoForm";
 import TodoHeader from "./TodoHeader/TodoHeader";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import useLocalStorage from "../../hooks/useLocalStorage";
+import axios from "./../../axios-todos";
 
 const TodoList = (props) => {
-  const [todos, setTodos] = useState([]);
-  const [filteredTodos] = useState([]);
+  const [todos, setTodos] = useLocalStorage("todos", []);
+
+  useEffect(() => {
+    // const getTodos = async () => {
+    //   const myTodos = await axios.get("/todos.json");
+    //   console.log(myTodos);
+    //   setTodos(myTodos.data);
+    // };
+    // getTodos();
+  }, []);
 
   const addTodoHandler = (todo) => {
     setTodos([...todos, todo]);
@@ -15,6 +25,8 @@ const TodoList = (props) => {
   const removeTodoHandler = (id) => {
     const updatedTodos = [...todos].filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
+
+    // await axios.delete('');
   };
 
   const updateTodoHandler = (id) => {
@@ -49,7 +61,7 @@ const TodoList = (props) => {
 
   return (
     <div className={classes["todo-list"]}>
-      <TodoHeader remainingTasks={remainingTodos()} />
+      <TodoHeader remainingTasks={remainingTodos()} name="Default" />
       <div className={classes["todo-body"]}>
         <div className={classes["tasks"]}>
           {todos.map((item) => {
